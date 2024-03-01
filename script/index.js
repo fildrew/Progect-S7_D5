@@ -71,7 +71,6 @@ const createCardProduct = function (img, name, brand, price, id, description) {
     <div class="d-flex justify-content-evenly">
         <a href="#"  class="btn btn-1">Buy<i class="bi bi-cart-check-fill ps-2"></i></a>
         <a href="./info.html?resourceId=${id}" class="btn btn-2">Details<i class="bi bi-zoom-in ps-2"></i></a>
-        <a id="${id}" resourceId=${id}" class="btn btn-secondary"><i class="bi bi-pencil-fill"></i></a>
     </div>`;
 
     product.innerHTML = prodContent;
