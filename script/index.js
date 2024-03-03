@@ -54,7 +54,7 @@ const createCardProduct = function (img, name, brand, price, id, description) {
         "justify-content-between"  
     );
 
-    product.style.width = "18rem";
+    product.style.width = "20rem";
     let prodContent = `            
     <div>
         <img
@@ -64,14 +64,15 @@ const createCardProduct = function (img, name, brand, price, id, description) {
         />
     </div>
     <div class="card-body">
-        <h4 class="card-title mb-3">${name}</h4>
+        <h4 class="card-title mb-4">${name}</h4>
         <h5 id="brand">Brand<span class="badge bg-4 p-2 fs-6 ms-2">${brand}</span></h5>
         <h5 id="price">Price<span class="badge bg-3 p-2 fs-6 ms-3">${price}€</span></h5>
         <p class="card-text">${description}</p>
     </div>
     <div class="d-flex justify-content-evenly">
-        <a href="#"  class="btn btn-1">Buy<i class="bi bi-cart-check-fill ps-2"></i></a>
-        <a href="./details.html?resourceId=${id}" class="btn btn-2">Details<i class="bi bi-zoom-in ps-2"></i></a>
+        <button class="btn btn-black btn-rounded"><a href="#" class="btn btn-black btn-rounded">Buy<i class="bi bi-cart-check-fill ps-2"></i></a></button>
+        <button class="btn btn-black btn-rounded text-white"><a href="./details.html?resourceId=${id}" class="btn btn-2">Details<i class="bi bi-zoom-in ps-2"></i></a>
+       
     </div>`;
 
     product.innerHTML = prodContent;
