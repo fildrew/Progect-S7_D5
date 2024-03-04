@@ -43,12 +43,9 @@ const createCardProduct = function (img, name, brand, price, id, description) {
     let product = document.createElement("div");
     product.classList.add(
         "card",
-        "border",
-        "border-4",
-        "border-2",
-        "rounded-4",
+        "rounded",
         "mx-1",
-        "p-2",
+        "p-3",
         "d-flex",
         "flex-column",
         "justify-content-between"  
@@ -57,24 +54,31 @@ const createCardProduct = function (img, name, brand, price, id, description) {
     product.style.width = "20rem";
     let prodContent = `            
     <div>
-        <img
-    src="${img}"
-    class="card-img-top cardImg"
-    alt="prod-img"
-        />
-    </div>
-    <div class="card-body">
-        <h4 class="card-title mb-4">${name}</h4>
-        <h5 id="brand">Brand<span class="badge bg-4 p-2 fs-6 ms-2">${brand}</span></h5>
-        <h5 id="price">Price<span class="badge bg-3 p-2 fs-6 ms-3">${price}€</span></h5>
-        <p class="card-text">${description}</p>
-    </div>
-    <div class="d-flex justify-content-evenly">
-        <button class="btn btn-black btn-rounded"><a href="#" class="btn btn-black btn-rounded">Buy<i class="bi bi-cart-check-fill ps-2"></i></a></button>
-        <button class="btn btn-black btn-rounded text-white"><a href="./details.html?resourceId=${id}" class="btn btn-2">Details<i class="bi bi-zoom-in ps-2"></i></a>
-       
-    </div>`;
-
+            <img
+                src="${img}"
+                class="card-img-top cardImg"
+                alt="prod-img"
+            />
+        </div>
+        <div class="card-body">
+            <h4 class="card-title mb-4">${name}</h4>
+            <h5 id="brand">Brand<span class="badge bg-4 p-2 fs-6 ms-2">${brand}</span></h5>
+            <h5 id="price">Price<span class="badge bg-3 p-2 fs-6 ms-3">${price}€</span></h5>
+            <p class="card-text mb-2">${description}</p>
+        </div>
+        <div class="d-flex justify-content-evenly-between">
+            <button type="button" class="btn btn-black btn-rounded">
+                <a href="#" class="btn btn-black btn-rounded">Buy<i class="bi bi-cart-check-fill ps-2"></i></a>
+            </button>
+            <button type="button" class="btn btn-black btn-rounded text-white">
+                <a href="./details.html?resourceId=${id}" class="btn btn-2">Details<i class="bi bi-zoom-in ps-2"></i></a>
+            </button>
+            <button type="button" class="btn btn-black btn-rounded text-white">
+                <a href="./backoffice.html?resourceId=${id}" >Modify<i class="bi bi-zoom-in ps-2"></i></a>
+            </button>
+        </div>
+    `;
+   
     product.innerHTML = prodContent;
     productContainer.appendChild(product);
 };
